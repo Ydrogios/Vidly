@@ -65,8 +65,8 @@ namespace Vidly.Controllers
             if (string.IsNullOrWhiteSpace(sortBy))
                 sortBy = "Name";
             return Content("pageIndex=" + pageIndex.ToString() + "sortBy=" + sortBy);
-        }
-
+        } 
+        //marinos
         [Route("movies/released/{year}/{month:regex(\\d{4}):range(1,12)}")]
         public ActionResult ByReleaseYear(int year,int month)
         {
