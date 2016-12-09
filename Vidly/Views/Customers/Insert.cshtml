@@ -1,0 +1,26 @@
+﻿@model Vidly.Models.Customer
+
+@{
+    ViewBag.Title = "Insert Customer";
+
+}
+<h2>Insert New Customer</h2>
+
+@using (Html.BeginForm("Save", "Customers"))
+{
+    <div>
+        @Html.LabelFor(Model => Model.Name)
+    </div>
+    <div>
+        @Html.TextBoxFor(Model => Model.Name)
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.Id)
+    </div>
+    <br/>
+    <div>
+        @Html.TextBoxFor(Model => Model.Id)
+    </div>
+    
+        <input type="submit" name ="Save" value="Save" />
+}
